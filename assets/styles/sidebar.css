@@ -1,0 +1,185 @@
+.sidebar {
+    width: 200px;
+    height: calc(100% - 200px);
+    float: left;
+    margin-top: 75px;
+    position: fixed;
+    z-index: 2;
+}
+
+.users {
+    height: 100%;
+    overflow-y: auto;
+    background-color: #8faaec;
+    padding-top: 0;
+}
+
+.users li {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    align-items: center;
+}
+
+.users li:hover {
+    background: #b1c4f5;
+}
+
+.users li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.users::-webkit-scrollbar {
+    width: 8px;
+}
+
+.users::-webkit-scrollbar-thumb {
+    background-color: #e1e1e1;
+}
+
+.user h5 {
+    max-width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user__check {
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.user__icon {
+    margin-right: 15px;
+}
+
+.content__circle {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+}
+
+.animation {
+    animation-name: red-circle;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes red-circle {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.2, 1.2, 1.2);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.user__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+}
+
+.info__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 120px;
+    position: fixed;
+    bottom: 0;
+    background-color: #8faaec;
+    z-index: 2;
+}
+
+.info__block__inner {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #b1c4f5;
+}
+
+.info__block__inner p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.info__block__inner p::selection{
+    color: rgb(119, 207, 207);
+    background-color: white;
+}
+
+.info__block__inner div {
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info__block__inner div > a {
+    color: white;
+}
+
+.fa-telegram:hover {
+    color: blue;
+}
+
+.fa-instagram:hover {
+    color: rgb(182, 81, 81);
+}
+
+.fa-facebook:hover {
+    color: rgb(62, 62, 184);
+}
+
+@media screen and (max-width: 1200px) { 
+    .sidebar {
+        width: 50px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .users {
+        overflow: hidden;
+    }
+
+    .users li .user__check {
+        display: none;
+    }
+
+    .users li a .user__icon {
+        margin-right: 0;
+    }
+
+    .user h5 {
+        display: none;
+    }
+
+    .user {
+        padding-left: 5px;
+    }
+
+    .info__block {
+        display: none;
+    } 
+}

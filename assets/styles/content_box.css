@@ -1,0 +1,80 @@
+.content_box {
+    margin-top: 90px;
+    margin-left: 215px;
+    float: left;
+    height: 100%;
+    width: calc(100% - 215px);
+}
+
+section {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    max-width: 100%;
+    overflow: hidden;
+    order: 1;
+    flex: 0 1 100%;
+}
+
+section div {
+    width: auto;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+section div::-webkit-scrollbar {
+    display: none;
+}
+
+.btn {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    color: rgb(243, 228, 222);
+    background-color: #8faaec;
+}
+
+.btn:hover {
+    background-color: #cbf5f7;
+    color: #8faaec;
+}
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 15px;
+}
+
+@media screen and  (max-width: 1200px){
+    .content_box {
+        margin-left: 65px;
+        width: calc(100% - 65px);
+    }
+
+    .preview_card-info {
+        padding-top: 10px!important;
+        padding-left: 10px!important;
+    }
+
+    .preview_card-info > div img {
+        margin-right: 5px;
+    }
+}
+
+@media screen and  (max-width: 990px){
+    .preview_card-info {
+        display: none;
+    }
+
+    .preview_card-video {
+        width: 100%!important;
+    }
+
+    .preview_card-video img {
+        border-radius: 10px!important;
+    }
+}
+
+

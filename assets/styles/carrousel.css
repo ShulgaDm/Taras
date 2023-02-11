@@ -1,0 +1,124 @@
+.carrousel_video {
+    max-width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carrousel_video-slider_nav {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 35px;
+    z-index: 2;
+    width: 60%;
+}
+
+.carrousel_video-slider_nav .slider_nav-item {
+    display: block;
+    width: 60px;
+    height: 7px;
+    border: 2px solid #fff;
+    background-color: rgba(114, 52, 109, 0.8);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color .2s linear;
+}
+
+.carrousel_video-slider_nav .slider_nav-item:hover {
+    background-color: #fff;
+}
+
+#s1:checked ~ .s1 {
+    display: flex;
+}
+
+#s2:checked ~ .s2 {
+    display: flex;
+}
+
+#s3:checked ~ .s3 {
+    display: flex;
+}
+
+#s4:checked ~ .s4 {
+    display: flex;
+}
+
+.carrousel_video-preview {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carrousel_video-preview input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.preview_card {
+    display: none;
+    width: 70%;
+    height: 90%;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.preview_card-video {
+    width: 70%;
+    position: relative;
+}
+
+.preview_card-video div {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(74, 36, 71, 0.5);
+    border-radius: 10px;
+}
+
+.preview_card-video img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+    backface-visibility: hidden;
+}
+
+.preview_card-info {
+    width: 25%;
+    background-color: #8faaec;
+    padding-top: 15px;
+    padding-left: 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+.preview_card-info > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.preview_card-info > div img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.preview_card-info > div div {
+    font-size: 1.2em;
+}
+
+.preview_card-info span {
+    cursor: pointer;
+}
+
+
